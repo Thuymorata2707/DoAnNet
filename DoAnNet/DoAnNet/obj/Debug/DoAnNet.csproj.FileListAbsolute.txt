@@ -1,0 +1,68 @@
+D:\.Net\DoAnNet\DoAnNet\bin\Debug\DoAnNet.exe.config
+D:\.Net\DoAnNet\DoAnNet\bin\Debug\DoAnNet.exe
+D:\.Net\DoAnNet\DoAnNet\bin\Debug\DoAnNet.pdb
+D:\.Net\DoAnNet\DoAnNet\bin\Debug\Guna.UI2.dll
+D:\.Net\DoAnNet\DoAnNet\obj\Debug\DoAnNet.csproj.AssemblyReference.cache
+D:\.Net\DoAnNet\DoAnNet\obj\Debug\DoAnNet.csproj.SuggestedBindingRedirects.cache
+D:\.Net\DoAnNet\DoAnNet\obj\Debug\DoAnNet.Form1.resources
+D:\.Net\DoAnNet\DoAnNet\obj\Debug\DoAnNet.Properties.Resources.resources
+D:\.Net\DoAnNet\DoAnNet\obj\Debug\DoAnNet.csproj.GenerateResource.cache
+D:\.Net\DoAnNet\DoAnNet\obj\Debug\DoAnNet.csproj.CoreCompileInputs.cache
+D:\.Net\DoAnNet\DoAnNet\obj\Debug\DoAnNet.csproj.CopyComplete
+D:\.Net\DoAnNet\DoAnNet\obj\Debug\DoAnNet.exe
+D:\.Net\DoAnNet\DoAnNet\obj\Debug\DoAnNet.pdb
+D:\.Net\DoAnNet\DoAnNet\obj\Debug\DoAnNet.frmAdmin.resources
+D:\.Net\DoAnNet\DoAnNet\obj\Debug\DoAnNet.Admin.UC_BangDK.resources
+D:\.Net\DoAnNet\DoAnNet\obj\Debug\DoAnNet.Admin.UC_AddUser.resources
+D:\.Net\DoAnNet\DoAnNet\obj\Debug\DoAnNet.Admin.UC_ViewUser.resources
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\bin\Debug\DoAnNet.exe.config
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\bin\Debug\DoAnNet.exe
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\bin\Debug\DoAnNet.pdb
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\bin\Debug\Guna.UI2.dll
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\obj\Debug\DoAnNet.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\obj\Debug\DoAnNet.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\obj\Debug\DoAnNet.Admin.UC_AddUser.resources
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\obj\Debug\DoAnNet.Admin.UC_BangDK.resources
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\obj\Debug\DoAnNet.Admin.UC_ViewUser.resources
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\obj\Debug\DoAnNet.Form1.resources
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\obj\Debug\DoAnNet.frmAdmin.resources
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\obj\Debug\DoAnNet.Properties.Resources.resources
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\obj\Debug\DoAnNet.csproj.GenerateResource.cache
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\obj\Debug\DoAnNet.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\obj\Debug\DoAnNet.csproj.CopyComplete
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\obj\Debug\DoAnNet.exe
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\obj\Debug\DoAnNet.pdb
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\obj\Debug\DoAnNet.Admin.UC_Profile.resources
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\obj\Debug\DoAnNet.frmUser.resources
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\obj\Debug\DoAnNet.User.US_BangDK.resources
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\obj\Debug\DoAnNet.User.US_AddMedicine.resources
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\obj\Debug\DoAnNet.User.US_ViewMedicine.resources
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\obj\Debug\DoAnNet.User.US_UpdateMedicine.resources
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\obj\Debug\DoAnNet.User.US_ViewCheckValidity.resources
+C:\Users\Admin\Documents\Zalo Received Files\DoAnNet\DoAnNet\obj\Debug\DoAnNet.User.US_SellMedicine.resources
+D:\DALT.NET\DoAnNet\DoAnNet\bin\Debug\DoAnNet.exe.config
+D:\DALT.NET\DoAnNet\DoAnNet\bin\Debug\DoAnNet.exe
+D:\DALT.NET\DoAnNet\DoAnNet\bin\Debug\DoAnNet.pdb
+D:\DALT.NET\DoAnNet\DoAnNet\bin\Debug\Guna.UI2.dll
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.csproj.AssemblyReference.cache
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.Admin.UC_AddUser.resources
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.Admin.UC_BangDK.resources
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.Admin.UC_Profile.resources
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.Admin.UC_ViewUser.resources
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.Form1.resources
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.frmAdmin.resources
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.frmUser.resources
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.Properties.Resources.resources
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.User.US_AddMedicine.resources
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.User.US_BangDK.resources
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.User.US_SellMedicine.resources
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.User.US_UpdateMedicine.resources
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.User.US_ViewCheckValidity.resources
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.User.US_ViewMedicine.resources
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.csproj.GenerateResource.cache
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.csproj.CoreCompileInputs.cache
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.csproj.CopyComplete
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.exe
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.pdb
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.User.US_HoaDon.resources
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.User.US_RevenueStatistics.resources
