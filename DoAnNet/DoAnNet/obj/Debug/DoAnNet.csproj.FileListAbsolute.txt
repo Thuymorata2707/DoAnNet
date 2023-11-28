@@ -66,3 +66,4 @@ D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.exe
 D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.pdb
 D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.User.US_HoaDon.resources
 D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.User.US_RevenueStatistics.resources
+D:\DALT.NET\DoAnNet\DoAnNet\obj\Debug\DoAnNet.Admin.UC_TKDoanhThu.resources

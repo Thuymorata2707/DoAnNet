@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.UC_DoanhThu = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblUserName = new System.Windows.Forms.Label();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
             this.btnViewUser = new Guna.UI2.WinForms.Guna2Button();
@@ -41,6 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.uC_TKDoanhThu1 = new DoAnNet.Admin.UC_TKDoanhThu();
             this.uC_Profile1 = new DoAnNet.Admin.UC_Profile();
             this.uC_ViewUser1 = new DoAnNet.Admin.UC_ViewUser();
             this.uC_AddUser1 = new DoAnNet.Admin.UC_AddUser();
@@ -49,6 +50,7 @@
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -57,8 +59,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.UC_DoanhThu);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.lblUserName);
             this.panel1.Controls.Add(this.btnLogOut);
             this.panel1.Controls.Add(this.btnProfile);
             this.panel1.Controls.Add(this.btnViewUser);
@@ -71,23 +73,33 @@
             this.panel1.Size = new System.Drawing.Size(256, 1100);
             this.panel1.TabIndex = 0;
             // 
+            // UC_DoanhThu
+            // 
+            this.UC_DoanhThu.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.UC_DoanhThu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.UC_DoanhThu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.UC_DoanhThu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.UC_DoanhThu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.UC_DoanhThu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.UC_DoanhThu.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UC_DoanhThu.ForeColor = System.Drawing.Color.White;
+            this.UC_DoanhThu.HoverState.FillColor = System.Drawing.Color.White;
+            this.UC_DoanhThu.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.UC_DoanhThu.Image = ((System.Drawing.Image)(resources.GetObject("UC_DoanhThu.Image")));
+            this.UC_DoanhThu.ImageSize = new System.Drawing.Size(30, 30);
+            this.UC_DoanhThu.Location = new System.Drawing.Point(0, 484);
+            this.UC_DoanhThu.Name = "UC_DoanhThu";
+            this.UC_DoanhThu.Size = new System.Drawing.Size(253, 45);
+            this.UC_DoanhThu.TabIndex = 4;
+            this.UC_DoanhThu.Text = "Xem Doanh Thu";
+            this.UC_DoanhThu.Click += new System.EventHandler(this.UC_DoanhThu_Click);
+            // 
             // panel2
             // 
             this.panel2.Location = new System.Drawing.Point(259, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(2223, 1598);
             this.panel2.TabIndex = 1;
-            // 
-            // lblUserName
-            // 
-            this.lblUserName.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.ForeColor = System.Drawing.Color.Yellow;
-            this.lblUserName.Location = new System.Drawing.Point(12, 568);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(217, 50);
-            this.lblUserName.TabIndex = 0;
-            this.lblUserName.Text = "label2";
-            this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnLogOut
             // 
@@ -101,7 +113,7 @@
             this.btnLogOut.ForeColor = System.Drawing.Color.White;
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnLogOut.Location = new System.Drawing.Point(0, 503);
+            this.btnLogOut.Location = new System.Drawing.Point(0, 535);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(253, 45);
             this.btnLogOut.TabIndex = 3;
@@ -122,7 +134,7 @@
             this.btnProfile.HoverState.ForeColor = System.Drawing.Color.Black;
             this.btnProfile.Image = ((System.Drawing.Image)(resources.GetObject("btnProfile.Image")));
             this.btnProfile.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnProfile.Location = new System.Drawing.Point(3, 443);
+            this.btnProfile.Location = new System.Drawing.Point(3, 433);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(253, 45);
             this.btnProfile.TabIndex = 3;
@@ -214,6 +226,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.uC_TKDoanhThu1);
             this.panel3.Controls.Add(this.uC_Profile1);
             this.panel3.Controls.Add(this.uC_ViewUser1);
             this.panel3.Controls.Add(this.uC_AddUser1);
@@ -223,12 +236,21 @@
             this.panel3.Size = new System.Drawing.Size(2223, 1598);
             this.panel3.TabIndex = 1;
             // 
+            // uC_TKDoanhThu1
+            // 
+            this.uC_TKDoanhThu1.Location = new System.Drawing.Point(-9, -5);
+            this.uC_TKDoanhThu1.Name = "uC_TKDoanhThu1";
+            this.uC_TKDoanhThu1.Size = new System.Drawing.Size(1667, 1102);
+            this.uC_TKDoanhThu1.TabIndex = 4;
+            this.uC_TKDoanhThu1.Load += new System.EventHandler(this.uC_TKDoanhThu1_Load);
+            // 
             // uC_Profile1
             // 
             this.uC_Profile1.Location = new System.Drawing.Point(0, 0);
             this.uC_Profile1.Name = "uC_Profile1";
             this.uC_Profile1.Size = new System.Drawing.Size(1806, 1152);
             this.uC_Profile1.TabIndex = 3;
+            this.uC_Profile1.Load += new System.EventHandler(this.uC_Profile1_Load);
             // 
             // uC_ViewUser1
             // 
@@ -268,6 +290,10 @@
             // 
             this.guna2Elipse4.TargetControl = this.panel2;
             // 
+            // guna2Elipse5
+            // 
+            this.guna2Elipse5.TargetControl = this.panel2;
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,7 +326,6 @@
         private Guna.UI2.WinForms.Guna2Button btnProfile;
         private Guna.UI2.WinForms.Guna2Button btnViewUser;
         private Guna.UI2.WinForms.Guna2Button btnAddUser;
-        private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private Admin.UC_BangDK uC_BangDK1;
@@ -311,5 +336,8 @@
         private Admin.UC_ViewUser uC_ViewUser1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
         private Admin.UC_Profile uC_Profile1;
+        private Guna.UI2.WinForms.Guna2Button UC_DoanhThu;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
+        private Admin.UC_TKDoanhThu uC_TKDoanhThu1;
     }
 }

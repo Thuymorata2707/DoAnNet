@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.AxHost;
 
 namespace DoAnNet.User
 {
@@ -24,12 +25,13 @@ namespace DoAnNet.User
         private void US_SellMedicine_Load(object sender, EventArgs e)
         {
             US_SellMedicine_Load(sender, e, ds);
+            TenDuocSi();
         }
 
         private void US_SellMedicine_Load(object sender, EventArgs e, DataSet ds)
         {
             listBoxMedicines.Items.Clear();
-            query = "select mname from medic where eDate >= getDate() and quantity > 0";
+            query = "select mname from medic WHERE TRY_CONVERT(datetime, eDate, 103) >= GETDATE() AND quantity > 0\r\n";
             ds = fn.getData(query);
 
             for(int i = 0; i < ds.Tables[0].Rows.Count; i++) 
@@ -37,16 +39,25 @@ namespace DoAnNet.User
                 listBoxMedicines.Items.Add(ds.Tables[0].Rows[i][0].ToString());
             }
         }
-
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             listBoxMedicines.Items.Clear();
-            query = "select mname from medic where mname like '" + txtSearch.Text + "%' and eDate >= getDate() and quantity > '0'";
+            query = "select mname from medic where mname like '" + txtSearch.Text + "%' and TRY_CONVERT(datetime, eDate, 103) >= GETDATE()  and quantity > '0'";
             ds = fn.getData(query);
 
             for(int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 listBoxMedicines.Items.Add(ds.Tables[0].Rows[i][0].ToString());
+            }
+        }
+
+        public void TenDuocSi()
+        {
+            string query = string.Format("select name from users where id = {0}", GlobalData.Instance.GlobalCounter);
+            DataTable tb = fn.LayDuLieu(query);
+            foreach (DataRow dr in tb.Rows)
+            {
+                txtDuocSi.Text = dr["name"].ToString();
             }
         }
 
@@ -56,7 +67,7 @@ namespace DoAnNet.User
 
             String name = listBoxMedicines.GetItemText(listBoxMedicines.SelectedItem);
             txtMediName.Text = name;
-            query = "select mid, eDate, perUnit from medic where mname = '" + name + "'";
+            query = "select id, eDate, perUnit from medic where mname = '" + name + "'";
             ds = fn.getData(query);
             txtMedicineId.Text = ds.Tables[0].Rows[0][0].ToString();
             txtExpriceDate.Text = ds.Tables[0].Rows[0][1].ToString();
@@ -83,7 +94,7 @@ namespace DoAnNet.User
         {
             if(txtMedicineId.Text != "")
             {
-                query ="select quantity from medic where mid = '" + txtMedicineId.Text + "'";
+                query ="select quantity from medic where id = '" + txtMedicineId.Text + "'";
                 DataSet ds = fn.getData(query);
 
                 quantity = Int64.Parse(ds.Tables[0].Rows[0][0].ToString());
@@ -101,8 +112,9 @@ namespace DoAnNet.User
 
                     totalAmount = totalAmount + int.Parse(txtTotalPrice.Text);
                     lblTotal.Text = "Rs. " + totalAmount.ToString();
+                    txtTotal.Text = totalAmount.ToString();
 
-                    query = "update medic set quantity = '" + (quantity - newQuantity) + "' where mid = '" + txtMedicineId.Text + "'";
+                    query = "update medic set quantity = '" + (quantity - newQuantity) + "' where id = '" + txtMedicineId.Text + "'";
                     fn.setData(query, "Thuốc đã được thêm vào hoá đơn.");
 
                 }
@@ -160,6 +172,8 @@ namespace DoAnNet.User
                     fn.setData(query, "Thuốc đã được loại bỏ khỏi hoá đơn");
                     totalAmount = totalAmount - valueAmount;
                     lblTotal.Text = "Rs. " + totalAmount.ToString();
+                    txtTotal.Text = "Rs. " + totalAmount.ToString();
+
                 }
                 US_SellMedicine_Load(this, null);
             }
@@ -179,30 +193,51 @@ namespace DoAnNet.User
             print.PorportionalColumns = true;
             print.HeaderCellAlignment = StringAlignment.Near;
             print.Footer = "Tổng số tiền phải trả : " + lblTotal.Text;
+            print.Footer = "Dược sĩ : " + txtDuocSi.Text;
             print.FooterSpacing = 15;
             print.PrintDataGridView(guna2DataGridView1);
 
             totalAmount = 0;
             lblTotal.Text = "Rs. 00";
             guna2DataGridView1.DataSource = 0;
-        }
-
-        private void btnThemCTHD_Click(object sender, EventArgs e)
-        {
-            if (txtNoOfUnit.Text != null && txtTotalPrice.Text !="" && txtMaHD.Text != null && txtNoOfUnit.Text !=null)
+            if (lblTotal.Text != "" && txtMaHD.Text != "")
             {
                 String MaHD = txtMaHD.Text;
-                String mid = txtMediName.Text;
-                String SoLuong = txtNoOfUnit.Text;
-                Int64 TongTien = Int64.Parse(txtTotalPrice.Text);
+                String NgayMua = txtNgayMua.Text;
+                Int64 TongTien = Int64.Parse(txtTotal.Text);
 
-                query = "insert into CTHoaDon (mhd, tenthuoc, mnumber, perunit) values ('" + MaHD + "','" + mid + "','" + SoLuong + "', '" + TongTien + " )";
-                fn.setData(query, "Thuốc được thêm vào dữ liệu!");
+                query = "update HoaDon set NgayMua = '" + NgayMua + "', TongTien = " + TongTien + " where MaHD = '" + MaHD + "'";
+                fn.setData(query, "HD được thêm vào dữ liệu!");
             }
             else
             {
                 MessageBox.Show("Nhập tất cả dữ liệu.", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            
+        }
+
+        private void btnThemCTHD_Click(object sender, EventArgs e)
+        {
+            if (txtNoOfUnit.Text != "" && txtTotalPrice.Text != "" && txtMaHD.Text != "" && txtNoOfUnit.Text != "")
+            {
+                String MaHD = txtMaHD.Text;
+                String id = txtMedicineId.Text;
+                String SoLuong = txtNoOfUnit.Text;
+                Int64 ThanhTien = Int64.Parse(txtTotalPrice.Text);
+
+                query = "insert into CTHoaDon (MaHD, id, SoLuong, ThanhTien) values ('" + MaHD + "','" + id + "','" + SoLuong + "', '" + ThanhTien + "')";
+                fn.setData(query, "CTHD được thêm vào dữ liệu!");
+            }
+            else
+            {
+                MessageBox.Show("Nhập tất cả dữ liệu.", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void lblTotal_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnSync_Click(object sender, EventArgs e)

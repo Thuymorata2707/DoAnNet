@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.ModelBinding;
 using System.Windows.Forms;
 
 namespace DoAnNet
@@ -47,6 +48,7 @@ namespace DoAnNet
                 if (ds.Tables[0].Rows.Count != 0)
                 {
                     String role = ds.Tables[0].Rows[0][1].ToString();
+
                     if(role == "Admin")
                     {
                         frmAdmin admin = new frmAdmin(txtUsername.Text);
@@ -55,6 +57,12 @@ namespace DoAnNet
                     }
                     else if (role == "Duoc si")
                     {
+                        
+                        foreach(DataRow dr in ds.Tables[0].Rows)
+                        {
+                            int id = Convert.ToInt32(dr["Id"]);
+                            GlobalData.Instance.GlobalCounter = id;
+                        }
                         frmUser user = new frmUser(txtUsername.Text);
                         user.Show();
                         this.Hide();

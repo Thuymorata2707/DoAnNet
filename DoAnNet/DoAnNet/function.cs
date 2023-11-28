@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace DoAnNet
 {
@@ -17,8 +18,9 @@ namespace DoAnNet
             //SqlConnection con = new SqlConnection();
             //con.ConnectionString = @"Data Source=ADMIN-PC\\SQLEXPRESS;Initial Catalog=pharmacy;Integrated Security=True";
             //return con;
-            SqlConnection con = new SqlConnection(@"Data Source=THUYTEO\SQLEXPRESS;Initial Catalog=pharmacy;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=THUYTEO\SQLEXPRESS;Initial Catalog=pharmacyy;Integrated Security=True");
             return con;
+
         }
         public DataSet getData(String query)
         {
@@ -31,7 +33,17 @@ namespace DoAnNet
             da.Fill(ds);
             return ds;
         }
-        public void setData(String query, String msg)
+
+        public DataTable LayDuLieu(string query)
+        {
+            SqlConnection con = new SqlConnection(@"Data Source=THUYTEO\SQLEXPRESS;Initial Catalog=pharmacyy;Integrated Security=True");
+            SqlDataAdapter da = new SqlDataAdapter(query, con);
+            DataTable tb = new DataTable();
+            da.Fill(tb);
+            return tb;
+        }
+    
+    public void setData(String query, String msg)
         {
             SqlConnection con = getConnection();
             SqlCommand cmd = new SqlCommand();

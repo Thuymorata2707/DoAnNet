@@ -71,12 +71,19 @@
     <Compile Include="Admin\UC_Profile.Designer.cs">
       <DependentUpon>UC_Profile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\UC_TKDoanhThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\UC_TKDoanhThu.Designer.cs">
+      <DependentUpon>UC_TKDoanhThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\UC_ViewUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Admin\UC_ViewUser.Designer.cs">
       <DependentUpon>UC_ViewUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="BienToanCuc.cs" />
     <Compile Include="DGVPrinter.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -155,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\UC_Profile.resx">
       <DependentUpon>UC_Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\UC_TKDoanhThu.resx">
+      <DependentUpon>UC_TKDoanhThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\UC_ViewUser.resx">
       <DependentUpon>UC_ViewUser.cs</DependentUpon>

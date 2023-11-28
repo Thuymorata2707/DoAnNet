@@ -34,12 +34,12 @@ namespace DoAnNet.User
         {
             if(txtCheck.SelectedIndex == 0)
             {
-                query = "select * from medic where eDate >= getDate()";
+                query = "select * from medic where TRY_CONVERT(datetime, eDate, 103) >= GETDATE()";
                 setDataGridView(query, "Thuốc Còn Hạn", Color.Black);
             }
             else if(txtCheck.SelectedIndex == 1)
             {
-                query = " select * from medic where eDate <= getDate()";
+                query = " select * from medic where TRY_CONVERT(datetime, eDate, 103) < GETDATE()";
                 setDataGridView(query, "Thuốc Hết Hạn", Color.Red);
 
             }

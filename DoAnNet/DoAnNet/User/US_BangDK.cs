@@ -44,12 +44,12 @@ namespace DoAnNet.User
         }*/
         public void loadChart()
         { 
-            query = "select count(mname) from medic where eDate >= getDate()";
+            query = "select count(mname) from medic where TRY_CONVERT(datetime, eDate, 103) >= GETDATE()";
             ds = fn.getData(query);
             count = Int64.Parse(ds.Tables[0].Rows[0][0].ToString());
             this.chart1.Series["Thuốc Còn Hạn"].Points.AddXY("Medicine Validity Chart", count);
 
-            query = "select count(mname) from medic where eDate <= getDate()";
+            query = "select count(mname) from medic where TRY_CONVERT(datetime, eDate, 103) < GETDATE()";
             ds = fn.getData(query);
             count = Int64.Parse(ds.Tables[0].Rows[0][0].ToString());
             this.chart1.Series["Thuốc Hết Hạn"].Points.AddXY("Medicine Validity Chart", count);

@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUser));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.lblUser = new System.Windows.Forms.Label();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnSellMedicine = new Guna.UI2.WinForms.Guna2Button();
@@ -42,17 +44,21 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.uS_HoaDon1 = new DoAnNet.User.US_HoaDon();
+            this.uS_RevenueStatistics1 = new DoAnNet.User.US_RevenueStatistics();
             this.uS_SellMedicine1 = new DoAnNet.User.US_SellMedicine();
             this.uS_ViewCheckValidity1 = new DoAnNet.User.US_ViewCheckValidity();
             this.uS_UpdateMedicine1 = new DoAnNet.User.US_UpdateMedicine();
             this.uS_ViewMedicine1 = new DoAnNet.User.US_ViewMedicine();
             this.uS_AddMedicine1 = new DoAnNet.User.US_AddMedicine();
             this.uS_BangDK1 = new DoAnNet.User.US_BangDK();
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse8 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -61,6 +67,8 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.guna2Panel1.Controls.Add(this.guna2Button2);
+            this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.Controls.Add(this.lblUser);
             this.guna2Panel1.Controls.Add(this.btnLogOut);
             this.guna2Panel1.Controls.Add(this.btnSellMedicine);
@@ -75,16 +83,61 @@
             this.guna2Panel1.Size = new System.Drawing.Size(265, 1051);
             this.guna2Panel1.TabIndex = 0;
             // 
+            // guna2Button2
+            // 
+            this.guna2Button2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.BorderColor = System.Drawing.Color.Black;
+            this.guna2Button2.HoverState.FillColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
+            this.guna2Button2.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button2.Location = new System.Drawing.Point(0, 602);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(265, 42);
+            this.guna2Button2.TabIndex = 8;
+            this.guna2Button2.Text = "Hoá Đơn";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.BorderColor = System.Drawing.Color.Black;
+            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
+            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button1.Location = new System.Drawing.Point(-10, 650);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(265, 42);
+            this.guna2Button1.TabIndex = 7;
+            this.guna2Button1.Text = "Thống Kê Hoá Đơn";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUser.ForeColor = System.Drawing.Color.White;
-            this.lblUser.Location = new System.Drawing.Point(87, 179);
+            this.lblUser.Location = new System.Drawing.Point(35, 182);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(70, 28);
             this.lblUser.TabIndex = 6;
             this.lblUser.Text = "User";
+            this.lblUser.Click += new System.EventHandler(this.lblUser_Click);
             // 
             // btnLogOut
             // 
@@ -101,7 +154,7 @@
             this.btnLogOut.HoverState.ForeColor = System.Drawing.Color.Black;
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnLogOut.Location = new System.Drawing.Point(0, 634);
+            this.btnLogOut.Location = new System.Drawing.Point(-10, 706);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(265, 42);
             this.btnLogOut.TabIndex = 5;
@@ -123,7 +176,7 @@
             this.btnSellMedicine.HoverState.ForeColor = System.Drawing.Color.Black;
             this.btnSellMedicine.Image = ((System.Drawing.Image)(resources.GetObject("btnSellMedicine.Image")));
             this.btnSellMedicine.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnSellMedicine.Location = new System.Drawing.Point(0, 563);
+            this.btnSellMedicine.Location = new System.Drawing.Point(0, 554);
             this.btnSellMedicine.Name = "btnSellMedicine";
             this.btnSellMedicine.Size = new System.Drawing.Size(265, 42);
             this.btnSellMedicine.TabIndex = 2;
@@ -257,6 +310,8 @@
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Controls.Add(this.uS_HoaDon1);
+            this.guna2Panel2.Controls.Add(this.uS_RevenueStatistics1);
             this.guna2Panel2.Controls.Add(this.uS_SellMedicine1);
             this.guna2Panel2.Controls.Add(this.uS_ViewCheckValidity1);
             this.guna2Panel2.Controls.Add(this.uS_UpdateMedicine1);
@@ -268,25 +323,20 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1806, 1152);
             this.guna2Panel2.TabIndex = 1;
             // 
-            // guna2Elipse2
+            // uS_HoaDon1
             // 
-            this.guna2Elipse2.TargetControl = this.guna2Panel2;
+            this.uS_HoaDon1.Location = new System.Drawing.Point(-12, 0);
+            this.uS_HoaDon1.Name = "uS_HoaDon1";
+            this.uS_HoaDon1.Size = new System.Drawing.Size(1667, 1102);
+            this.uS_HoaDon1.TabIndex = 7;
+            this.uS_HoaDon1.Load += new System.EventHandler(this.uS_HoaDon1_Load);
             // 
-            // guna2Elipse3
+            // uS_RevenueStatistics1
             // 
-            this.guna2Elipse3.TargetControl = this.guna2Panel2;
-            // 
-            // guna2Elipse4
-            // 
-            this.guna2Elipse4.TargetControl = this.guna2Panel2;
-            // 
-            // guna2Elipse5
-            // 
-            this.guna2Elipse5.TargetControl = this.guna2Panel2;
-            // 
-            // guna2Elipse6
-            // 
-            this.guna2Elipse6.TargetControl = this.guna2Panel2;
+            this.uS_RevenueStatistics1.Location = new System.Drawing.Point(0, 3);
+            this.uS_RevenueStatistics1.Name = "uS_RevenueStatistics1";
+            this.uS_RevenueStatistics1.Size = new System.Drawing.Size(1667, 1112);
+            this.uS_RevenueStatistics1.TabIndex = 6;
             // 
             // uS_SellMedicine1
             // 
@@ -330,6 +380,34 @@
             this.uS_BangDK1.Name = "uS_BangDK1";
             this.uS_BangDK1.Size = new System.Drawing.Size(1667, 1102);
             this.uS_BangDK1.TabIndex = 0;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.TargetControl = this.guna2Panel2;
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.TargetControl = this.guna2Panel2;
+            // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.TargetControl = this.guna2Panel2;
+            // 
+            // guna2Elipse5
+            // 
+            this.guna2Elipse5.TargetControl = this.guna2Panel2;
+            // 
+            // guna2Elipse6
+            // 
+            this.guna2Elipse6.TargetControl = this.guna2Panel2;
+            // 
+            // guna2Elipse7
+            // 
+            this.guna2Elipse7.TargetControl = this.guna2Panel2;
+            // 
+            // guna2Elipse8
+            // 
+            this.guna2Elipse8.TargetControl = this.guna2Panel2;
             // 
             // frmUser
             // 
@@ -377,5 +455,11 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
         private User.US_SellMedicine uS_SellMedicine1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse7;
+        private User.US_RevenueStatistics uS_RevenueStatistics1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse8;
+        private User.US_HoaDon uS_HoaDon1;
     }
 }

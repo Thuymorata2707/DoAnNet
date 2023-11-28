@@ -24,7 +24,6 @@ namespace DoAnNet
         public frmAdmin (String userName)
         {
             InitializeComponent();
-            lblUserName.Text = userName;
             user = userName;
             uC_ViewUser1.ID = ID;
             uC_Profile1.ID = ID;
@@ -50,6 +49,7 @@ namespace DoAnNet
             uC_ViewUser1.Visible=false;
             uC_AddUser1.Visible = false;    
             uC_Profile1.Visible=false;
+            uC_TKDoanhThu1.Visible=false;
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)
@@ -70,6 +70,24 @@ namespace DoAnNet
         {
             uC_Profile1.Visible = true;
             uC_Profile1.BringToFront();
+        }
+
+
+
+        private void uC_Profile1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UC_DoanhThu_Click(object sender, EventArgs e)
+        {
+            uC_TKDoanhThu1.Visible = true;
+            uC_TKDoanhThu1.BringToFront();
+        }
+
+        private void uC_TKDoanhThu1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

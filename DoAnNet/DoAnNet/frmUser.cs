@@ -48,6 +48,7 @@ namespace DoAnNet
             uS_ViewCheckValidity1.Visible = false;
             uS_SellMedicine1.Visible = false;
             btnDashbord.PerformClick();
+            uS_HoaDon1.Visible = false;
         }
 
         private void btnAddMedicine_Click(object sender, EventArgs e)
@@ -81,6 +82,31 @@ namespace DoAnNet
             uS_SellMedicine1.BringToFront();
         }
 
-      
+        private void guna2Panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            uS_RevenueStatistics1.Visible = true;
+            uS_RevenueStatistics1.BringToFront();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            uS_HoaDon1.Visible = true;
+            uS_HoaDon1.BringToFront();
+        }
+
+        private void uS_HoaDon1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUser_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
